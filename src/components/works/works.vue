@@ -47,8 +47,8 @@
 			}
 		},
 		created() {
-			this.$http.get('/api/works').then((res) => {
-				res = res.body
+			this.axios.get('/api/works').then((res) => {
+				res = res.data
 				if (res.errno === ERROR_OK) {
 					this.works = res.data
 					this.$nextTick(() => {

@@ -22,7 +22,8 @@
 						v-for="(food,index) in item.foods"
 						class="food-item"
 						:key="index">
-							<div class="icon"><img width="57"  :src="food.icon" alt=""></div>
+							<div class="icon"><img width="57"
+							:src="food.icon" alt=""></div>
 							<div class="content">
 								<h2 class="name">{{food.name}}</h2>
 								<p class="desc">{{food.description}}</p>
@@ -97,8 +98,8 @@
 		},
 		created() {
 			this.classMap = ['iconpc', 'iconphone']
-			this.$http.get('/api/projects').then((res) => {
-				res = res.body
+			this.axios.get('/api/projects').then((res) => {
+				res = res.data
 				if (res.errno === ERROR_OK) {
 					this.projects = res.data
 					this.$nextTick(() => {

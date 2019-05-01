@@ -9,6 +9,7 @@
 		<keep-alive>
 			<router-view :info="info"></router-view>
 		</keep-alive>
+		<lg-preview></lg-preview>
   </div>
 </template>
 
@@ -32,8 +33,9 @@ export default {
 		}
 	},
 	created() {
-		this.$http.get('/api/info?id=' + this.info.id).then((response) => {
-			response = response.body
+		this.axios.get('/api/info?id=' + this.info.id).then((response) => {
+			response = response.data
+			console.log(response)
 			if (response.errno === ERRO_OK) {
 				this.info = Object.assign({}, this.info, response.data)
 			}

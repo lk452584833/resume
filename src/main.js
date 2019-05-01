@@ -2,21 +2,26 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import App from './App'
-import router from './router'
-import store from './store'
-// 加载模拟数据mock
-import './mock'
-// rest.css 和 icon.css
-import '../static/css/reset.css'
+import router from './router' // 加载路由 vue.$route vue.$router
+// import Resource from 'vue-resource' // 加载ajax   vue.$http...
+import axios from 'axios'
+import VueAxios from 'vue-axios'
+import store from './store' // 加载vuex  $store
+import PicPreview from 'vue-picture-preview-extend' // 加载preview 图片查看器
+import utils from './common/js/utils.js' // 加载自定义公用类js库
+
+import './mock' // 加载模拟数据mock
+import '../static/css/reset.css' // 加载rest.css 和 icon.css
 import './common/css/icon.css'
-import utils from './common/js/utils.js'
-// 解决移动端300毫秒点击延迟
-import FastClick from 'fastclick'
+import FastClick from 'fastclick' // 解决移动端300毫秒点击延迟
 FastClick.attach(document.body)
 
+// Vue.use(Resource)
+Vue.use(PicPreview)
 Vue.use(utils)
 Vue.config.productionTip = false
-
+Vue.use(VueAxios, axios)
+// Vue.prototype.$axios = axios // 挂载到原型上
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
@@ -28,6 +33,6 @@ new Vue({
   components: { App },
   template: '<App/>',
   created() {
-	router.push({path: '/projects'})
+	this.$router.push({path: '/projects'})
   }
 })

@@ -19,7 +19,7 @@ function urlParam() {
 	return obj
 }
 
-/* 返回错误信息弹出 */
+/* 返回错误信息弹出，需配合reset.css */
 function showBackMsg(data) {
 	var $body = document.body
 	var $div = document.createElement('div')

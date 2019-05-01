@@ -33,7 +33,8 @@
         "description": "本科"
       }
     ],
-    "avatar": "http://static.galileo.xiaojukeji.com/static/tms/seller_avatar_256px.jpg", 
+    "avatar": "http://pc.gzhdglnk.com/web/images/head.jpg",
+		"backgroundImg": "http://pc.gzhdglnk.com/web/images/head.jpg",
     "infos": [
       "精通HTML5，CSS3等网页制作技术，熟悉H5+CSS3新特性，能熟练运用H5+CSS3进行移动端开发与响应式布局。",
       "熟练掌握JavaScript,jQuery实现效果,熟练使用ajax与后台进行交互",

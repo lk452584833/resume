@@ -1,10 +1,16 @@
 <template>
 	<div class="header">
 		<div class="header-wrapper">
-			<div class="avatar"><img :src="info.avatar" width="64" height="64" alt=""></div>
+			<div class="avatar">
+				<img :src="info.avatar" width="64" height="64" alt=""
+				v-preview="info.avatar"
+				data-title="head"
+				>
+				<!-- <vue-preview :slides="slide1" @close="handleClose"></vue-preview> -->
+				</div>
 			<div class="info">
 				<h1 class="title">
-					<span class="brand"></span><span class="name">{{info.name ? info.name : $store.state.myinfo.userInfo.username}}</span>
+					<span class="brand"></span><span class="name">{{info.name}}</span>
 				</h1>
 				<p class="des"><span class="tel"></span><a :href="'tel:'+info.tel">{{info.tel ? info.tel : $store.state.myinfo.userInfo.telphone}}</a></p>
 				<div class="supports" @click="showDetail">
@@ -20,7 +26,7 @@
 			<span class="icon"></span><span class="des">{{info.bulletin}}</span>
 			<i class="icon-keyboard_arrow_right"></i>
 		</div>
-		<div class="background-header"><img :src="info.avatar" alt=""></div>
+		<div class="background-header"><img :src="info.backgroundImg" alt=""></div>
 		<transition name="fade">
 			<div class="detail stick-footer" v-show="detail">
 				<div class="stick-wrapper">
@@ -90,6 +96,11 @@
 				GetMyStar: 'myStar' // 对应myinfo.js geeters 里面的mystar 方法
 			})
 		},
+		watch: {
+			info2() {
+				console.log(this.info2.data)
+			}
+		},
 		created() {
 			// this.classMap = ['decrease', 'discount', 'special', 'invoice', 'guarantee']
 			this.classMap = ['birthage', 'sex', 'school', 'nation', 'education']
@@ -117,6 +128,9 @@
 			},
 			hideDetail() {
 				this.detail = false
+			},
+			handleClose() {
+				console.log('close event')
 			}
 		}
 	}
