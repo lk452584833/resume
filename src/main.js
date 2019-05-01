@@ -3,7 +3,6 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router' // 加载路由 vue.$route vue.$router
-// import Resource from 'vue-resource' // 加载ajax   vue.$http...
 import axios from 'axios'
 import VueAxios from 'vue-axios'
 import store from './store' // 加载vuex  $store
@@ -16,12 +15,12 @@ import './common/css/icon.css'
 import FastClick from 'fastclick' // 解决移动端300毫秒点击延迟
 FastClick.attach(document.body)
 
-// Vue.use(Resource)
 Vue.use(PicPreview)
 Vue.use(utils)
 Vue.config.productionTip = false
 Vue.use(VueAxios, axios)
 // Vue.prototype.$axios = axios // 挂载到原型上
+
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
