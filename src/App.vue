@@ -15,7 +15,6 @@
 
 <script>
 	import vheader from './components/header/header.vue'
-	// import {urlParam} from './common/js/utils.js'
 const ERRO_OK = 0
 export default {
   name: 'App',
