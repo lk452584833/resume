@@ -7,7 +7,7 @@
 					<header-star :score="GetMyStar" :size='36'></header-star>
 				</div>
 				<div class="favorite" @click="toggleFavorite">
-					<span class="icon-favorite" :class="{'active':favorite}"></span>
+					<span class="icon-favorite" :class="{'active':favorite}" ref='iconfavorite'></span>
 					<span class="text">{{favoriteText}}</span>
 				</div>
 			</div>
@@ -53,7 +53,6 @@
 				</div>
 			</div>
 		</div>
-		<message-sure :text="unmsg"  ref='messagesure' :show="msgshow"></message-sure>
 	</div>
 </template>
 
@@ -64,13 +63,11 @@
 	import AppSplit from '@/components/AppSplit/AppSplit'
 	import IconSupports from '@/components/IconSupports/IconSupports'
 	import HeaderStar from '@/components/HeaderStar/HeaderStar.vue'
-	import MessageSure from '@/components/MessageSure/MessageSure.vue'
 	export default{
 		components: {
 			AppSplit: AppSplit,
 			IconSupports: IconSupports,
-			HeaderStar: HeaderStar,
-			MessageSure: MessageSure
+			HeaderStar: HeaderStar
 		},
 		props: {
 			info: {
@@ -79,8 +76,6 @@
 		},
 		data() {
 			return {
-				msgshow: false,
-				unmsg: '',
 				favorite: (() => {
 					return loadFromLocal(this.info.id, 'favorite', false)
 				})()
@@ -149,12 +144,20 @@
 				})
 			},
 			toggleFavorite() {
+				let self = this
 				if (this.favorite) {
-					this.msgshow = true
-					this.unmsg = '不敢兴趣，不支持了！'
+					// this.$_messagesure('不支持了!') // 参数为string titleText显示默认
+					// this.$_messagesure({text: '不支持了!'}) // 参数为obj 不存在titleText，title显示默认
+					// this.$_messagesure({text: '不支持了!',titleText: ''}) // 空表示，不显示title
+					this.$_messagesure({text: '不支持了!', titleText: '温馨提示'}, function() { // 回调函数，最后执行
+						self.favorite = !self.favorite
+						saveToLocal(self.info.id, 'favorite', self.favorite)
+					})
+				} else {
+					this.$_message.success('感谢您的支持')
+					this.favorite = !this.favorite
+					saveToLocal(this.info.id, 'favorite', this.favorite)
 				}
-				this.favorite = !this.favorite
-				saveToLocal(this.info.id, 'favorite', this.favorite)
 			}
 		}
 	}
@@ -188,7 +191,11 @@
 					position: absolute;right:11px;top:18px;text-align: center;width:50px;
 					.icon-favorite{
 						display: block;margin-bottom: 4px;font-size: 24px;line-height:24px;color:#d4d6d9;
-						&.active{color:rgb(240,20,20);}
+						transition:all 0.5s ease-out;transform: translate(0,0);
+						&.active{
+							transition:all 0.5s ease-out;transform: translate(0,-3px);
+							color:rgb(240,20,20);
+						}
 					}
 					.text{font-size: 10px;line-height: 10px;color:rgb(77,85,93)}
 				}

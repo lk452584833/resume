@@ -1,19 +1,21 @@
 <template>
-	<div class="message-sure" v-show="show && isShow" @click.stop="cancel">
-		<div class="message-sure-wrapper">
-			<div class="title">
-				<span class="text">{{titleText}}</span>
+	<transition name="fade">
+		<div class="message-sure" v-show="show" @click.stop="cancel">
+			<div class="message-sure-wrapper">
+				<div class="title" v-if="titleText">
+					<span class="text">{{titleText}}</span>
+				</div>
+				<div class="content">
+					<span class="text">{{text}}</span>
+				</div>
+				<div class="operation">
+					<span class="cancel" @click.stop="cancel">{{cancelText}}</span>
+					<span class="sure" @click.stop="sureDone">{{sureText}}</span>
+				</div>
 			</div>
-			<div class="content">
-				<span class="text">{{text}}</span>
-			</div>
-			<div class="operation">
-				<span class="cancel" @click.stop="cancel">{{cancelText}}</span>
-				<span class="sure" @click.stop="sureDone">{{sureText}}</span>
-			</div>
+			<div class="background"></div>
 		</div>
-		<div class="background"></div>
-	</div>
+	</transition>
 </template>
 
 <script>
@@ -26,22 +28,24 @@
 			show: {
 				type: Boolean,
 				default: true
+			},
+			titleText: {
+				type: String,
+				default: ''
 			}
 		},
 		data() {
 			return {
-				isShow: true,
-				titleText: '操作提示:',
 				cancelText: '取消',
 				sureText: '确认'
 			}
 		},
 		methods: {
 			cancel() {
-				this.isShow = false
+				this.$emit('msgcancel')
 			},
 			sureDone() {
-				console.log('确认')
+				this.$emit('msgsure')
 			}
 		}
 	}
@@ -49,6 +53,12 @@
 
 <style lang="less" scoped="scoped">
 	.message-sure{
+		&.fade-enter-active,&.fade-leave-active{
+			transition:all 0.5s;pointer-events: none;
+		}
+		&.fade-enter,&.fade-leave-to{
+			opacity: 0;
+		}
 		.message-sure-wrapper{
 			position: fixed;
 			left:50%;top:40%;
