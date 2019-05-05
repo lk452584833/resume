@@ -53,6 +53,7 @@
 				</div>
 			</div>
 		</div>
+		<message-sure :text="unmsg"  ref='messagesure' :show="msgshow"></message-sure>
 	</div>
 </template>
 
@@ -63,11 +64,13 @@
 	import AppSplit from '@/components/AppSplit/AppSplit'
 	import IconSupports from '@/components/IconSupports/IconSupports'
 	import HeaderStar from '@/components/HeaderStar/HeaderStar.vue'
+	import MessageSure from '@/components/MessageSure/MessageSure.vue'
 	export default{
 		components: {
 			AppSplit: AppSplit,
 			IconSupports: IconSupports,
-			HeaderStar: HeaderStar
+			HeaderStar: HeaderStar,
+			MessageSure: MessageSure
 		},
 		props: {
 			info: {
@@ -76,6 +79,8 @@
 		},
 		data() {
 			return {
+				msgshow: false,
+				unmsg: '',
 				favorite: (() => {
 					return loadFromLocal(this.info.id, 'favorite', false)
 				})()
@@ -144,6 +149,10 @@
 				})
 			},
 			toggleFavorite() {
+				if (this.favorite) {
+					this.msgshow = true
+					this.unmsg = '不敢兴趣，不支持了！'
+				}
 				this.favorite = !this.favorite
 				saveToLocal(this.info.id, 'favorite', this.favorite)
 			}

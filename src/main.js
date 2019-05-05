@@ -8,6 +8,7 @@ import VueAxios from 'vue-axios'
 import store from './store' // 加载vuex  $store
 import PicPreview from 'vue-picture-preview-extend' // 加载preview 图片查看器
 import utils from './common/js/utils.js' // 加载自定义公用类js库
+import vMessage from './components/Message/index.js' // 加载自定义弹出信息，以插件形式安装。此方法单独以组件方法形式，是因为多了模板样式
 
 import './mock' // 加载模拟数据mock
 import '../static/css/reset.css' // 加载rest.css 和 icon.css
@@ -17,6 +18,7 @@ FastClick.attach(document.body)
 
 Vue.use(PicPreview)
 Vue.use(utils)
+Vue.use(vMessage)
 Vue.config.productionTip = false
 Vue.use(VueAxios, axios)
 // Vue.prototype.$axios = axios // 挂载到原型上

@@ -1,5 +1,5 @@
 /**
-* 解析url参数
+* 解析url所有参数以对象形式解析
 * @example ?id=123&a=1
 * @return Object {id:123,a:1}
 */
@@ -17,6 +17,26 @@ function urlParam() {
 		})
 	}
 	return obj
+}
+/* 獲取URL查詢參數指定name */
+function getSearch(param) {
+	var search = location.search.substr(1)
+	var locate = search.search(param)
+	var paramString = ''
+	if (locate !== -1) {
+		var searchRest = search.substr(locate)
+		var len = searchRest.length
+		var and = searchRest.search('&')
+		if (and === -1) {
+			paramString = searchRest.substr(param, len)
+		} else {
+			paramString = searchRest.substr(param, and)
+		}
+		var paramArray = paramString.split('=')
+		return paramArray[1]
+	} else {
+		return false
+	}
 }
 
 /* 返回错误信息弹出，需配合reset.css */
@@ -62,26 +82,6 @@ function getImgBase64(path, callback) {
 		ctx.drawImage(img, 0, 0, imgWidth, imgHeight) // 繪製圖片
 		var dataUrl = canvas.toDataURL('image/jpeg') // 繪製圖片
 		callback ? callback(dataUrl) : ''
-	}
-}
-/* 獲取URL查詢參數 */
-function getSearch(param) {
-	var search = location.search.substr(1)
-	var locate = search.search(param)
-	var paramString = ''
-	if (locate !== -1) {
-		var searchRest = search.substr(locate)
-		var len = searchRest.length
-		var and = searchRest.search('&')
-		if (and === -1) {
-			paramString = searchRest.substr(param, len)
-		} else {
-			paramString = searchRest.substr(param, and)
-		}
-		var paramArray = paramString.split('=')
-		return paramArray[1]
-	} else {
-		return false
 	}
 }
 

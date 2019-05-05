@@ -115,12 +115,14 @@
 				if (substar && typeof substar === 'number') {
 					let num = Number(substar.toFixed(1)) // 小数点后保留1位
 					if (substar > 5) {
-						this.$_showBackMsg('评分为0.1~5之间')
+						this.$_message.warning('评分为0.1~5之间')
+						// this.$_showBackMsg('评分为0.1~5之间')
 						return false
 					}
 					this.addmystar(num)
 				} else {
-					this.$_showBackMsg('请输入您的评分')
+					this.$_message.info('请输入您的评分')
+					// this.$_showBackMsg('请输入您的评分')
 				}
 			},
 			showDetail() {
