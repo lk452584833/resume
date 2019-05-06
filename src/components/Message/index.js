@@ -2,7 +2,7 @@ import Message from './Message.vue'
 
 const MESSAGE = {
 	duration: 1500, // 显示的时间 ms
-	animateTime: 1000, // 动画时间,表示这个组件切换show的动画时间
+	animateTime: 300, // 动画时间,表示这个组件切换show的动画时间
 	install(Vue, options) {
 		if (typeof window !== 'undefined' && window.Vue) { // Vue 是全局变量时，自动获取Vue
 			Vue = window.Vue

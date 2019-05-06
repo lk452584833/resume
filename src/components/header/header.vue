@@ -96,11 +96,6 @@
 				GetMyStar: 'myStar' // 对应myinfo.js geeters 里面的mystar 方法
 			})
 		},
-		watch: {
-			info2() {
-				console.log(this.info2.data)
-			}
-		},
 		created() {
 			// this.classMap = ['decrease', 'discount', 'special', 'invoice', 'guarantee']
 			this.classMap = ['birthage', 'sex', 'school', 'nation', 'education']

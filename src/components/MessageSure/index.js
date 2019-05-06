@@ -3,12 +3,17 @@ import MessageSure from './MessageSure.vue'
 const MSG = {
 	animateTime: 500, // 弹窗出现，隐藏的动画时间
 	defaultTitle: '操作提示:', // 默认提示
+	isRegister: false, // 是否正在使用模板
 	install(Vue, options) {
 		if (typeof window !== 'undefined' && window.Vue) {
 			Vue = window.Vue
 		}
 		Vue.component('messagesure', MessageSure) // 全局注册模板
 		function BackMsg(text, callBack) {
+			if (MSG.isRegister) { // 操作未确认或者取消前，不会继续调用模板
+				return
+			}
+			MSG.isRegister = !MSG.isRegister
 			let words, titlemsg // 弹窗信息，弹出头部
 			if (typeof text === 'string') {
 				words = text
@@ -36,6 +41,8 @@ const MSG = {
 									clearTimeout(t1)
 									document.body.removeChild(el)
 									vm = null
+									VueOneMsg.$destroy()
+									MSG.isRegister = !MSG.isRegister
 								}, MSG.animateTime)
 							},
 							msgsure: function() { // 动画效果过后，清除元素，调用回调
@@ -44,6 +51,8 @@ const MSG = {
 									clearTimeout(t2)
 									document.body.removeChild(el)
 									vm = null
+									VueOneMsg.$destroy()
+									MSG.isRegister = !MSG.isRegister
 									callBack && (typeof callBack === 'function') && callBack()
 								}, MSG.animateTime)
 							}

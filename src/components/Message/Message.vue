@@ -1,5 +1,5 @@
 <template>
-	<transition class="messagefade">
+	<transition name="messagefade">
 		<div class="message" :class="type" v-show="show">
 			<i class="icon"></i>
 			<span class="text">{{text}}</span>
@@ -35,7 +35,7 @@
 <style scoped="scoped" lang="less">
 	.message{
 		&.messagefade-enter-active,&.messagefade-leave-active{
-			transition:all 1s linear;
+			transition:all 0.3s linear;
 		}
 		&.messagefade-enter,&.messagefade-leave-to{
 			opacity: 0;
