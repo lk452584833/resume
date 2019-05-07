@@ -98,8 +98,17 @@
 		},
 		created() {
 			this.classMap = ['iconpc', 'iconphone']
-			this.axios.get('/api/projects').then((res) => {
-				res = res.data
+			// this.axios.get('/api/projects').then((res) => {
+			// 	res = res.data
+			// 	if (res.errno === ERROR_OK) {
+			// 		this.projects = res.data
+			// 		this.$nextTick(() => {
+			// 			this._initScroll()
+			// 			this._setHeight()
+			// 		})
+			// 	}
+			// })
+			this.$_axios.getProjects().then((res) => {
 				if (res.errno === ERROR_OK) {
 					this.projects = res.data
 					this.$nextTick(() => {

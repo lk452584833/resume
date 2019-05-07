@@ -47,8 +47,16 @@
 			}
 		},
 		created() {
-			this.axios.get('/api/works').then((res) => {
-				res = res.data
+			// this.axios.get('/api/works').then((res) => {
+				// res = res.data
+				// if (res.errno === ERROR_OK) {
+				// 	this.works = res.data
+				// 	this.$nextTick(() => {
+				// 		this._initScroll()
+				// 	})
+				// }
+			// })
+			this.$_axios.getWork().then((res) => {
 				if (res.errno === ERROR_OK) {
 					this.works = res.data
 					this.$nextTick(() => {

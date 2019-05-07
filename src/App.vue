@@ -14,7 +14,7 @@
 </template>
 
 <script>
-	import vheader from './components/header/header.vue'
+import vheader from './components/header/header.vue'
 const ERRO_OK = 0
 export default {
   name: 'App',
@@ -32,8 +32,14 @@ export default {
 		}
 	},
 	created() {
-		this.axios.get('/api/info?id=' + this.info.id).then((response) => {
-			response = response.data
+		// this.axios.get('/api/info?id=' + this.info.id).then((response) => {
+		// 	response = response.data
+		// 	if (response.errno === ERRO_OK) {
+		// 		this.info = Object.assign({}, this.info, response.data)
+		// 	}
+		// })
+		this.$_axios.getInfo({id: this.info.id}).then((response) => {
+			// console.log(response)
 			if (response.errno === ERRO_OK) {
 				this.info = Object.assign({}, this.info, response.data)
 			}
