@@ -25,11 +25,9 @@ module.exports = {
     'generator-star-spacing': 'off',
     // allow debugger during development
     'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
-		"indent":0,
-		"space-before-function-paren":["error","never"],
-		"no-tabs":'off',
-		"skipBlankLines": true,
-		"ignoreComments": true,
-		"no-unused-expressions": 0
+		"indent":0, // 缩进
+		"space-before-function-paren":["error","never"], // 在函数括号之前需要或不允许空格,never 绝不
+		"no-tabs":'off', // 禁止所有标签
+		"no-unused-expressions": 0 // 短路求值和三目运算都允许
   }
 }

@@ -19,13 +19,13 @@ export default {
 	install(Vue, options) {
 		Vue.prototype.$_axios = {
 			getWork: function(data) {
-				return get('/api/works', data)
+				return get('/works', data)
 			},
 			getInfo: function(data) {
-				return get('/api/info', data)
+				return get('info', data)
 			},
 			getProjects: function(data) {
-				return get('/api/projects', data)
+				return get('projects', data)
 			}
 		}
 	}

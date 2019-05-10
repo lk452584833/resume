@@ -38,6 +38,6 @@ new Vue({
   components: { App },
   template: '<App/>',
   created() {
-	this.$router.push({path: '/info'})
+	this.$router.push({path: '/projects'})
   }
 })
