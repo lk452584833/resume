@@ -11,17 +11,35 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 
+
 const env = process.env.NODE_ENV === 'testing'
   ? require('../config/test.env')
   : require('../config/prod.env')
 
 const webpackConfig = merge(baseWebpackConfig, {
   module: {
-    rules: utils.styleLoaders({
-      sourceMap: config.build.productionSourceMap,
-      extract: true,
-      usePostCSS: true
-    })
+   //  rules:utils.styleLoaders({
+			//   sourceMap: config.build.productionSourceMap,
+			//   extract: true,
+			//   usePostCSS: true
+			// })
+			rules:[
+				 {
+            test: /\.css$/,
+            use: [ 'vue-style-loader', 'css-loader' ]
+        },
+        {
+            test: /\.less$/,
+            exclude: /node_modules/,
+            use: ExtractTextPlugin.extract({
+                fallback: "vue-style-loader",
+                use: [
+                    {loader: "css-loader"},
+                    {loader: "less-loader"},
+                ],
+            })
+        },
+			]
   },
   devtool: config.build.productionSourceMap ? config.build.devtool : false,
   output: {
