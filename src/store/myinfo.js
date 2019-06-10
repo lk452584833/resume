@@ -3,7 +3,7 @@ const state = { // 要设置的全局访问的state对象
 		username: '李凯',
 		telphone: '13802545044'
 	},
-	mystar: 2.5
+	mystar: 3.5
 }
 const getters = { // 实时监听state值的变化(最新状态)
 	myStar(state) { // 方法名随意,主要是来承载变化的mystar的值
