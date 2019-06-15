@@ -3,6 +3,7 @@
   "info": {
     "name": "李凯",
     "tel": "13802545044",
+		"email": "452584833@qq.com",
     "description": "本人为人诚实守信，勤奋好学，踏实肯做，有责任心，有信心",
 	  "birthDate": "1995.03",
 	  "sex": "男",
@@ -37,13 +38,14 @@
 		"backgroundImg": "http://person.gzhdglnk.com/web/images/head.jpg",
     "infos": [
       "精通HTML5，CSS3等网页制作技术, 能熟练运用H5+CSS3进行移动端开发与响应式布局。",
-      "熟练掌握JavaScript,jQuery实现效果",
-			"熟练使用ajax与后台进行交互,熟练使用less预处理器",
-      "熟悉vue.js,bootstrap,了解amazeui,mui,angularJS等框架",
-			"熟悉版本控制工具SVN,Git,熟悉w3c标准,http协议, ES6常用语法",
-			"熟练使用Dede,ecsho等开源模板一建搭站",
-			"了解微信开发流程,了解nodejs,vue-cli,webpack等构建工具",
-			"熟悉域名管理,网站备案流程,服务器相关。"
+      "熟练使用JavaScript,jQuery实现效果",
+			"熟练使用ajax与后台进行交互,熟练使用stylus,less等预处理器。",
+      "熟悉vue.js,bootstrap, 了解amazeui,mui,angularJS等框架。",
+			"熟悉nodeJs,webpack,vue-cli等构建工具",
+			"熟悉版本控制工具SVN,Git,熟悉w3c标准,http协议, ES6常用语法。",
+			"熟练使用Dede,ecsho等开源模板一建建站",
+			"了解小程序和微信开发流程",
+			"熟悉域名管理,网站备案流程,服务器等相关栏目管理。"
     ]
   },
   "projects": [
@@ -62,17 +64,39 @@
 					"endTime": 1513051920000,
           "icon": "http://person.gzhdglnk.com/web/images/web-bxzj.jpg"
         },
-        {
-          "name": "缦秀琳",
-          "address": "http://www.gdmxl.com",
-          "description": "床垫类项目",
-          "info": "床垫类展示项目,项目包含PC端和移动端,项目主展示产品中心,网站使用HTML5+CSS3+jQuery实现,移动端采用流体布局，使用css3 Selector简化代码。",
-					"duty": "完成PC端和移动端页面，对代码做优化兼容。并实现页面效果。",
-          "apply": "HTML5+CSS3,jQuery,mui,SuperSlide,dede",
-					"starTime": 1523506320000,
-					"endTime": 1523506320000,
-          "icon": "http://person.gzhdglnk.com/web/images/web-mxl.jpg"
+				{
+				  "name": "欧叶环保",
+				  "address": "http://pb1.ouye123.com",
+				  "description": "欧叶甲醛加盟",
+				  "info": "项目包含手机端和PC端,项目主要有简介，优势，案列，服务项目，合作加盟，产品中心，联系我们等模块。网站使用HTML5+CSS3实现页面，jquery实现效果,使用了swiper插件, 项目除了首页外,其他页面使用响应式布局,联系我们采用地图插件，添加了邮件系统，使用ajax完成前后台数据交互。使用css3 Selector简化代码。",
+				  "duty": "完成移动端开发以及对PC端开发，完成页面以及实现页面效果，与后台进行交互，对代码做优化。",
+				  "apply": "HTML5+CSS3，JavaScript,jQuery,swiper,地图插件,邮件系统",
+					"starTime": 1552363920000,
+					"endTime": 1556178381000,
+				  "icon": "http://person.gzhdglnk.com/web/images/web-oyhb.jpg"
 				},
+				{
+				  "name": "叶子甲醛",
+				  "address": "http://www.gzqbtz.com/",
+				  "description": "叶子甲醛加盟",
+				  "info": "项目包含手机端和PC端，项目主要有简介，优势，案列，服务项目，合作加盟，产品中心，联系我们等模块。网站使用HTML5+CSS3实现。联系我们采用地图插件，添加了邮件系统，使用ajax完成前后台数据交互。使用css3 Selector简化代码。",
+					"duty": "完成移动端开发和PC端开发，完成页面以及实现页面效果，与后台进行交互，对代码做优化。",
+					"apply": "HTML5+CSS3，JavaScript,jQuery,swiper,地图插件,邮件系统",
+					"starTime": 1547266320000,
+					"endTime": 1549944720000,
+				  "icon": "http://person.gzhdglnk.com/web/images/web-yz.jpg"
+				},
+        {
+          "name": "亿航门窗",
+          "address": "http://www.027yh.com/",
+          "description": "门窗类项目",
+        	"info": "项目主要有以下几个模块：首页，案例，详情页，客户见证，咨询中心，常见问题。网站采用HTML5+CSS3实现布局，使用媒体查询实现响应式页面。详情页添加了用户采购与用户评论模块。使用ajax与后台进行数据交互。使用css3 Selector简化代码。",
+          "duty": "完成页面布局并实现页面效果，与后台进行交互展示数据，对代码做优化。",
+        	"apply": "HTML5+CSS3,JavaScript,jQuery,ajax,svn",
+        	"starTime": 1476245520000,
+        	"endTime": 1478923920000,
+          "icon": "http://person.gzhdglnk.com/web/images/web-yh.jpg"
+        },
         {
           "name": "彗兴美业",
 					"address": "http://www.hxzypxxx.com/",
@@ -96,48 +120,26 @@
           "icon": "http://person.gzhdglnk.com/web/images/web-hx.jpg"
 				},
         {
-          "name": "鹏博官网",
-          "address": "http://www.pb9999.com/",
-          "description": "企业官网",
-          "info": "企业类官网,项目包含简介，新闻动态，招聘信息，地图等模块,网站采用HTML5+CSS3，使用css3 Selector简化代码，使用SuperSlide,地图插件等实现效果",
+          "name": "缦秀琳",
+          "address": "http://www.gdmxl.com",
+          "description": "床垫类项目",
+          "info": "床垫类展示项目,项目包含PC端和移动端,项目主展示产品中心,网站使用HTML5+CSS3+jQuery实现,移动端采用流体布局，使用css3 Selector简化代码。",
+        	"duty": "完成PC端和移动端页面，对代码做优化兼容。并实现页面效果。",
+          "apply": "HTML5+CSS3,jQuery,mui,SuperSlide,dede",
+        	"starTime": 1523506320000,
+        	"endTime": 1523506320000,
+          "icon": "http://person.gzhdglnk.com/web/images/web-mxl.jpg"
+        },
+				{
+				  "name": "鹏博官网",
+				  "address": "http://www.pb9999.com/",
+				  "description": "企业官网",
+				  "info": "企业类官网,项目包含简介，新闻动态，招聘信息，地图等模块,网站采用HTML5+CSS3，使用css3 Selector简化代码，使用SuperSlide,地图插件等实现效果",
 					"duty": "完成PC端页面并实现页面效果，采用dede搭建网站后台,资料整理上传。",
 					"apply": "HTML5+CSS3,JavaScript,jQuery,SuperSlide,dede,地图插件等",
 					"starTime": 1528776720000,
 					"endTime": 1528776720000,
-          "icon": "http://person.gzhdglnk.com/web/images/web-pb9999.jpg"
-				},
-        {
-          "name": "亿航门窗",
-          "address": "http://www.027yh.com/",
-          "description": "门窗类项目",
-					"info": "项目主要有以下几个模块：首页，案例，详情页，客户见证，咨询中心，常见问题。网站采用HTML5+CSS3实现布局，使用媒体查询实现响应式页面。详情页添加了用户采购与用户评论模块。使用ajax与后台进行数据交互。使用css3 Selector简化代码。",
-          "duty": "完成页面布局并实现页面效果，与后台进行交互展示数据，对代码做优化。",
-					"apply": "HTML5+CSS3,JavaScript,jQuery,ajax,svn",
-					"starTime": 1476245520000,
-					"endTime": 1478923920000,
-          "icon": "http://person.gzhdglnk.com/web/images/web-yh.jpg"
-				},
-        {
-          "name": "叶子甲醛",
-          "address": "http://www.gzqbtz.com/",
-          "description": "甲醛加盟",
-          "info": "项目包含手机端和PC端，项目主要有简介，优势，案列，服务项目，合作加盟，产品中心，联系我们等模块。网站使用HTML5+CSS3实现。联系我们采用地图插件，添加了邮件系统，使用ajax完成前后台数据交互。使用css3 Selector简化代码。",
-					"duty": "完成移动端开发以及对PC端进行二次开发，完成页面以及实现页面效果，与后台进行交互，对代码做优化。",
-					"apply": "HTML5+CSS3，JavaScript,jQuery,swiper,地图插件,邮件系统",
-					"starTime": 1547266320000,
-					"endTime": 1549944720000,
-          "icon": "http://person.gzhdglnk.com/web/images/web-yz.jpg"
-				},
-        {
-          "name": "万众医疗",
-          "address": "http://www.020wzyl.com/",
-          "description": "妇科医疗项目",
-         "info": "项目包含手机端和PC端，项目主要由妇科病种分类构成。网站采用HTML5+CSS3实现，移动端使用百分比和rem布局,添加了地图插件和邮件系统，使用css3 Selector简化代码。使用swiper,flexslider实现轮播效果",
-          "duty": "完成PC端和移动端页面，并实现页面效果,添加地图控件，邮件系统，对妇科病种进行整理分类。",
-          "apply": "HTML5+CSS3,JavaScript,jQuery,swiper,flexslider,地图插件",
-					"starTime": 1549944720000,
-					"endTime": 1552363920000,
-          "icon": "http://person.gzhdglnk.com/web/images/web-wzyl.jpg"
+				  "icon": "http://person.gzhdglnk.com/web/images/web-pb9999.jpg"
 				}
       ]
     },
@@ -145,6 +147,39 @@
       "name": "Phone-Online",
       "type": 1,
       "foods": [
+				{
+				  "name": "欧叶环保",
+				  "address": "http://pb1.ouye123.com",
+				  "description": "欧叶甲醛加盟",
+				  "info": "项目包含手机端和PC端,项目主要有简介，优势，案列，服务项目，合作加盟，产品中心，联系我们等模块。网站使用HTML5+CSS3实现页面，jquery实现效果,使用了swiper插件, 项目除了首页外,其他页面使用响应式布局,联系我们采用地图插件，添加了邮件系统，使用ajax完成前后台数据交互。使用css3 Selector简化代码。",
+				  "duty": "完成移动端开发和PC端开发，完成页面以及实现页面效果，与后台进行交互，对代码做优化。",
+				  "apply": "HTML5+CSS3，JavaScript,jQuery,swiper,地图插件,邮件系统",
+					"starTime": 1552363920000,
+					"endTime": 1556178381000,
+				  "icon": "http://person.gzhdglnk.com/web/images/web-oyhb.jpg"
+				},
+				{
+				  "name": "欧叶环保",
+				  "address": "http://pb2.ouye123.comm",
+				  "description": "欧叶甲醛加盟",
+				  "info": "移动端男科类项目，项目主要由男科病种分类医院简介，医生构成。网站采用HTML5+CSS3,使用rem和media实现布局,使用jQuery实现效果，使用css3 Selector简化代码。",
+				  "duty": "完成移动端开发和PC端开发，完成页面以及实现页面效果，与后台进行交互，对代码做优化。",
+				  "apply": "HTML5+CSS3，JavaScript,jQuery,swiper,地图插件,邮件系统",
+					"starTime": 1552363920000,
+					"endTime": 1556178381000,
+				  "icon": "http://person.gzhdglnk.com/web/images/web-oyhb.jpg"
+				},
+				{
+				  "name": "亿航门窗",
+				  "address": "http://www.027yh.com",
+				  "description": "门窗类项目",
+				  "info": "项目主要有以下几个模块：首页，案例，详情页，客户见证，咨询中心，常见问题。网站采用HTML5+CSS3实现布局，使用媒体查询实现响应式页面。详情页添加了用户采购与用户评论模块。使用ajax与后台进行数据交互。使用css3 Selector简化代码。",
+				  "duty": "完成页面布局并实现页面效果，与后台进行交互展示数据，对代码做优化。",
+				  "apply": "HTML5+CSS3,JavaScript,jQuery,ajax,svn",
+				  "starTime": 1476245520000,
+				  "endTime": 1478923920000,
+				  "icon": "http://person.gzhdglnk.com/web/images/web-yh.jpg"
+				},
         {
           "name": "版型之家",
           "address": "http://www.banxingzhijia.com/",
@@ -157,15 +192,15 @@
           "icon": "http://person.gzhdglnk.com/web/images/web-bxzj.jpg"
 				},
 				{
-				  "name": "缦秀琳",
-				  "address": "http://www.gdmxl.com/m/",
-				  "description": "床垫类项目",
-				  "info": "床垫类展示项目,项目包含PC端和移动端,项目主展示产品中心,网站使用HTML5+CSS3+jQuery实现,移动端采用流体布局，使用css3 Selector简化代码。",
-				  "duty": "完成PC端和移动端页面，对代码做优化兼容。并实现页面效果。",
-				  "apply": "HTML5+CSS3,jQuery,mui,SuperSlide,dede",
-					"starTime": 1523506320000,
-					"endTime": 1523506320000,
-				  "icon": "http://person.gzhdglnk.com/web/images/web-mxl.jpg"
+				  "name": "叶子甲醛",
+				  "address": "http://m.gzqbtz.com",
+				  "description": "叶子甲醛加盟",
+				  "info": "项目包含手机端和PC端，项目主要有简介，优势，案列，服务项目，合作加盟，产品中心，联系我们等模块。网站使用HTML5+CSS3实现。联系我们采用地图插件，添加了邮件系统，使用ajax完成前后台数据交互。使用css3 Selector简化代码。",
+				  "duty": "完成移动端开发以及对PC端进行二次开发，完成页面以及实现页面效果，与后台进行交互，对代码做优化。",
+				  "apply": "HTML5+CSS3，JavaScript,jQuery,swiper,地图插件,邮件系统",
+				  "starTime": 1547266320000,
+				  "endTime": 1549944720000,
+				  "icon": "http://person.gzhdglnk.com/web/images/web-yz.jpg"
 				},
 				{
 				  "name": "彗兴美业",
@@ -179,42 +214,20 @@
 				  "icon": "http://person.gzhdglnk.com/web/images/web-hx.jpg"
 				},
 				{
-				  "name": "亿航门窗",
-				  "address": "http://www.027yh.com",
-				  "description": "门窗类项目",
-				  "info": "项目主要有以下几个模块：首页，案例，详情页，客户见证，咨询中心，常见问题。网站采用HTML5+CSS3实现布局，使用媒体查询实现响应式页面。详情页添加了用户采购与用户评论模块。使用ajax与后台进行数据交互。使用css3 Selector简化代码。",
-				  "duty": "完成页面布局并实现页面效果，与后台进行交互展示数据，对代码做优化。",
-				  "apply": "HTML5+CSS3,JavaScript,jQuery,ajax,svn",
-				  "starTime": 1476245520000,
-				  "endTime": 1478923920000,
-				  "icon": "http://person.gzhdglnk.com/web/images/web-yh.jpg"
-				},
-				{
-				  "name": "叶子甲醛",
-				  "address": "http://m.gzqbtz.com",
-				  "description": "甲醛加盟",
-				  "info": "项目包含手机端和PC端，项目主要有简介，优势，案列，服务项目，合作加盟，产品中心，联系我们等模块。网站使用HTML5+CSS3实现。联系我们采用地图插件，添加了邮件系统，使用ajax完成前后台数据交互。使用css3 Selector简化代码。",
-				  "duty": "完成移动端开发以及对PC端进行二次开发，完成页面以及实现页面效果，与后台进行交互，对代码做优化。",
-				  "apply": "HTML5+CSS3，JavaScript,jQuery,swiper,地图插件,邮件系统",
-				  "starTime": 1547266320000,
-				  "endTime": 1549944720000,
-				  "icon": "http://person.gzhdglnk.com/web/images/web-yz.jpg"
-				},
-				{
-				  "name": "万众医疗",
-				  "address": "http://m.020wzyl.com",
-				  "description": "妇科医疗项目",
-				  "info": "项目包含手机端和PC端，项目主要由妇科病种分类构成。网站采用HTML5+CSS3实现，移动端使用百分比和rem布局,添加了地图插件和邮件系统，使用css3 Selector简化代码。使用swiper,flexslider实现轮播效果",
-				  "duty": "完成PC端和移动端页面，并实现页面效果,添加地图控件，邮件系统，对妇科病种进行整理分类。",
-				  "apply": "HTML5+CSS3,JavaScript,jQuery,swiper,flexslider,地图插件",
-					"starTime": 1549944720000,
-					"endTime": 1552363920000,
-				  "icon": "http://person.gzhdglnk.com/web/images/web-wzyl.jpg"
+				  "name": "缦秀琳",
+				  "address": "http://www.gdmxl.com/m/",
+				  "description": "床垫类项目",
+				  "info": "床垫类展示项目,项目包含PC端和移动端,项目主展示产品中心,网站使用HTML5+CSS3+jQuery实现,移动端采用流体布局，使用css3 Selector简化代码。",
+				  "duty": "完成PC端和移动端页面，对代码做优化兼容。并实现页面效果。",
+				  "apply": "HTML5+CSS3,jQuery,mui,SuperSlide,dede",
+					"starTime": 1523506320000,
+					"endTime": 1523506320000,
+				  "icon": "http://person.gzhdglnk.com/web/images/web-mxl.jpg"
 				},
 				{
 				  "name": "白云龙济",
 				  "address": "http://bdtg.byljnk.com",
-				  "description": "男科医疗类项目",
+				  "description": "医疗类网站",
 				  "info": "移动端男科类项目，项目主要由男科病种分类构成。网站采用HTML5+CSS3实现，移动端使用百分比,rem和media混合布局,添加了地图插件，使用css3 Selector简化代码。",
 				  "duty": "完成移动端页面，并实现页面效果,添加地图控件,对男科病种进行整理分类，添加专题页面。",
 				  "apply": "HTML5+CSS3,JavaScript,jQuery,地图插件",
@@ -225,35 +238,13 @@
 				{
 				  "name": "花都港龙",
 				  "address": "http://tg.gzglyjy.com",
-				  "description": "男科医疗类项目",
+				  "description": "医疗类网站",
 				  "info": "移动端男科类网站，项目由男科病种,简介,医生等模块构成。网站采用HTML5+CSS3,使用rem和media实现布局,使用jQuery实现效果，使用css3 Selector简化代码。",
 				  "duty": "完成移动端页面，并实现页面效果,添加地图控件,对男科病种进行整理分类，添加专题页面。",
-				  "apply": "HTML5+CSS3,JavaScript,jQuery,phonecommon,s地图插件",
+				  "apply": "HTML5+CSS3,JavaScript,jQuery,phonecommon,地图插件",
 					"starTime": 1502511120000,
 					"endTime": 1505189520000,
 				  "icon": "http://person.gzhdglnk.com/web/images/web-hdgl.jpg"
-				},
-				{
-				  "name": "从化侽建",
-				  "address": "http://sgm.chwcnk.com",
-				  "description": "男科医疗类项目",
-				  "info": "移动端男科类项目，项目主要由男科病种分类医院简介，医生构成。网站采用HTML5+CSS3,使用百分比和rem实现布局,使用jQuery实现效果，使用css3 Selector简化代码。",
-				  "duty": "完成移动端页面，并实现页面效果,添加地图控件,对男科病种进行整理分类，添加专题页面。",
-				  "apply": "HTML5+CSS3,JavaScript,jQuery,地图插件",
-					"starTime": 1499832720000,
-					"endTime": 1502511120000,
-				  "icon": "http://person.gzhdglnk.com/web/images/web-chnj.jpg"
-				},
-				{
-				  "name": "花都大桥",
-				  "address": "http://m.hddqnk.com",
-				  "description": "男科医疗类项目",
-				  "info": "移动端男科类项目，项目主要由男科病种分类医院简介，医生构成。网站采用HTML5+CSS3,使用rem和media实现布局,使用jQuery实现效果，使用css3 Selector简化代码。",
-				  "duty": "完成移动端页面，并实现页面效果,对男科病种进行整理分类，添加专题页面。",
-				  "apply": "HTML5+CSS3,JavaScript,jQuery,phonecommon",
-					"starTime": 1536725520000,
-					"endTime": 1539317520000,
-				  "icon": "http://person.gzhdglnk.com/web/images/web-hddq.jpg"
 				}
       ]
     },
@@ -353,10 +344,10 @@
 			"description": "公司描述",
 			"web": "web工程师",
 			"dutys": [
-				"负责公司前端开发，负责公司自己项目和加盟项目，完成PC端与移动端项目开发测试。",
+				"负责公司前端开发，完成PC端与移动端项目开发测试。",
+				"对部分网站进行优化，二次开发。负责公司加盟项目的网站开发",
 				"与其他部门人员沟通，开发和维护网站。",
-				"管理公司网站，涉及到域名管理，网站备案，服务器等",
-				"对公司由php搭建的内部挂号系统进行二次开发，维护。"
+				"对公司网站，域名及域名备案等相关栏目进行管理"
 			],
 			"starTime": 1499356800000,
 			"endTime": 1560528000000

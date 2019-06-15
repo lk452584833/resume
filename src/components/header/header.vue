@@ -13,9 +13,9 @@
 					<span class="brand"></span><span class="name">{{info.name}}</span>
 				</h1>
 				<p class="des"><span class="tel"></span><a :href="'tel:'+info.tel">{{info.tel ? info.tel : $store.state.myinfo.userInfo.telphone}}</a></p>
-				<div class="supports" @click="showDetail">
+				<div class="supports">
 					<span class="more"></span>
-					<span class="description">查看更多个人信息</span>
+					<span class="description">{{info.email}}</span>
 				</div>
 			</div>
 			<div class="num" v-if="info.supports" @click="showDetail">
@@ -160,7 +160,7 @@
 				.supports{
 					margin-bottom: 2px;font-size:0;
 					.icon{display: inline-block;width:12px;height:12px;vertical-align: top;margin-right: 4px;}
-					.more{display: inline-block;margin-right:6px;vertical-align: top;width:25px;height:12px;.bg-image('../../common/images/topmore');background-size: 25px 12px;background-repeat: no-repeat;}
+					.more{display: inline-block;margin-right:6px;vertical-align: top;width:25px;height:12px;.bg-image('../../common/images/mail');background-size: 25px 12px;background-repeat: no-repeat;}
 					.description{vertical-align: top;font-size: 10px;line-height: 12px;}
 				}
 			}
