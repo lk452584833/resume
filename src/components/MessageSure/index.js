@@ -20,11 +20,9 @@ const MSG = {
 				titlemsg = MSG.defaultTitle // string,使用默认titlText
 			} else if (text instanceof Object) { // 参数是个对象
 				words = text.text || ''
-				if ((typeof text.titleText) === 'undefined') { // 参数是个对象的情况下，不存在titleText属性时，使用默认
-					titlemsg = MSG.defaultTitle
-				} else {
-					titlemsg = text.titleText || '' // 存在titleText 属性时，(空的话，表示子组件,title隐藏)
-				}
+				// 参数是个对象的情况下，不存在titleText属性时，使用默认
+				// 存在titleText 属性时，(空的话，表示子组件,title隐藏)
+				titlemsg = (typeof text.titleText) === 'undefined' ? MSG.defaultTitle : (text.titleText || '')
 			}
 			let VueMsg = Vue.extend({
 				render(h) {

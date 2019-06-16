@@ -46,7 +46,88 @@
 			"熟练使用Dede,ecsho等开源模板一建建站",
 			"了解小程序和微信开发流程",
 			"熟悉域名管理,网站备案流程,服务器等相关栏目管理。"
-    ]
+    ],
+		"skills": [
+			{
+				"skill": "Html5+ccs3",
+				"description": [
+					"能够完全手写代码还原设计稿，实现响应式布局和移动端开发。",
+					"可以做什么: 使用flex、rem、media、百分比、等布局开发移动端,，使用2x,3x图来适配不同设备像素比的设备，css使用精灵图，减少请求。一些常用布局，sticky footer,栅格布局等",
+					"开发过程中注意点：命名规范，书写规范，符合w3c标准，html语义化，各个模块多写注释，标注用途，尽可能减少嵌套层数，各层级标注明显。css命名规范，样式规范。"
+				]
+			},
+			{
+				"skill": "javaScript+jQuery+ajax",
+				"description": [
+					"能够实现网页交互、动画效果，使用ajax与后台进行异步交互，获取数据，渲染页面",
+					"能够使用源生javascript实现网页的交互效果,比如：鼠标事件、菜单平滑折叠、单选多选、三级联动、简易轮播、简单游戏等。",
+					"使用jQuery实现dom操作、动画效果，比如：实现复杂动画效果，使用jQuery链式操作实现效果",
+					"开发过程中: 脚本放在底部，异步加载脚本：使用defer，async，或者使用动态脚本注入无阻塞加载。命名规范，书写规范，可以使用eslint校验代码，代码多写注释，注意dom操作引起的回流或者重绘，对这些操作优化处理，注意避免全局变量，通过字面量方式创建数组和对象，循环的优化等"
+				]
+			},
+			{
+				"skill": "Vue+Wbpack+Vue-cli",
+				"description": [
+					"通过vue-cli脚手架，快速搭建vue项目，以及使用vue相关技能。",
+					"创建项目，安装需要的依赖，比如：预处理器less，路由router，mockjs,axios，vuex状态管理等，根据需求安装在开发环境还是生产环境。这些依赖在webpack中添加修改相应的配置。比如css预处理器，需要添加相应的规则。",
+					"修改eslintrc.js 修改一些es6语法检查过滤项，项目是由vue-cli搭建，一些好的插件默认在使用的，比如autoprefixer帮助我们做兼容处理。",
+					"根据简历模板介绍vue中使用的技术点：",
+					"使用vue-router实现前端路由，路由中设置一些参数： linkActiveClass，linkExactActiveClass，mode: 'history' 。页面上调用路由处加上<keep-alive>，会保留当前组件状态，不会重新渲染。",
+					"路由模板路径通过组件模板import导入路径，实现异步路由加载。在webpack编译中会将我们的路由文件单独打包，浏览器访问的时候会按需加载。",
+					"使用vuex管理我们的全局状态，设置的全局访问的state对象，提供getters，mutations，actions方法，使得组件能够全局访问，并可以通知vuex对其进行修改。",
+					"使用mock本地模拟数据，配合axios获取本地数据，创建axios实例，创建request和response拦截，统一处理返回信息，并对axios的方法进行封装导出。axios创建api层，统一管理接口的调用，通过vue.use(),全局使用。",
+					"使用了自定义弹窗信息，通过组件模板以插件形式安装在全局，通过方法实现公用，如：个人信息中支持的弹出，评分格式错误的弹出等。",
+					"页面功能组件化，模块化，实现功能复用。比如：添加关注的动画，个人信息，星评，样式间隔等都是以组件形式复用；",
+					"项目中使用了PicPreview图片查看器，fastclick，better-scroll等插件对移动端项目进行了优化，使用了图标字体，css sticky footer，flex等布局进行优化。",
+					"开发过程中：使用eslint校验，提升代码质量，浏览器安装devtools帮助开发，注意vue组件构建、基础组件、耦合组件的命名、组件实例的放置顺序、元素特性的放置顺序等、按照vue的风格指南进行规范。"
+				]
+			},
+			{
+				"skill": "Webpack+Vue",
+				"description": [
+					"可以手动配置webpack，通过需求配置参数，构建项目，怎么实现：",
+					"初始化目录，配置开发环境和生成环境的webpack配置：配置出入口文件信息，指定输出路径和命名。",
+					"指定规则rules，不同类型的文件用什么规则来编译，比如:以.vue结尾的文件需要vue-loader，vue-template-compiler编译，.js、.jsx等模板通过babel-loader编译，这样可以使用es6，es7等一些前沿语法。",
+					"如果使用css预处理器，需要配置相应的.styuls、.less等的规则。图片通过url-loader处理等。并且相应的要安装这些包，还要注意不同的版本，其依赖包会不一样，需要查看对应的文档，比如babel7.0后依赖包与之前不同。",
+					"配置插件plugins实现想要的功能： 其中vue-loader需要指定它的插件vue-loader/lib/plugin，它是把定义过的其他规则复制和应用到.vue文件里相应的块中。",
+					"&nbsp;&nbsp;其他功能比如：开发模式使用vue-server-renderer/server-plugin ，打包后会输出json文件，通过这个包处理一些服务端渲染工作。使用html-webpack-plugin将打包后的文件注入到指定html模板，使用extract-text-webpack-plugin单独抽离css，（webpack4.0需要使用mini-css-extract-plugin ）需要在plugins里注册它们，",
+					"配置oplization属性就可以单独打包我们的内库文件，resolve启动后会从我们配置的入口找出依赖的模块，比如vue的默认模板是不支持使用template功能渲染模板，我们要使用就需要设置 用alias为：'vue$': 'vue/dist/vue.esm.js'，使用它的es module构建。",
+					"包括一些其他参数，做了相应的配置后，在webpack编译打包过程中就会根据这些配置做相应的操作。"
+				]
+			},
+			{
+				"skill": "Bootstrap+Amazeui+Mui等框架",
+				"description": [
+					"可以使用框架进行开发。",
+					"这些前端框架的原理类似，使用它写好的样式，指定它的class，就能快速的在页面上显示出样式。快速的构建项目"
+				]
+			},
+			{
+				"skill": "小程序和微信公众号",
+				"description": [
+					"了解小程序和微信开发流程，自己注册过微信公众测试账号，在上面添加过一些页面和小游戏。"
+				]
+			},
+			{
+				"skill": "Stylus+Less等预处理器",
+				"description": [
+					"能熟练使用css的预处理器开发，能够帮助我们快速的书写css，使用全局变量，表达式等加快开发效率。"
+				]
+			},
+			{
+				"skill": "Git+Svn",
+				"description": [
+					"git的常用指令：git clone url 获取项目，git status 查看文件状态，git add name 把文件添加到本地仓库，git commit -m '说明' 提交本地仓库，git pull url 从远处仓库获取最新版并合并到本地。git push 推送本地仓库到远程。git branch -a 查看分支，git checkout -b <name>切换分支等",
+					"svn：右键checkout，并迁出源代码，右键svn update，svn commit 更新和提交。本地新建文件需要先add,然后再提交。代码提交出错，可以先resolve还原到上一步，修改好后再提交。"
+				]
+			},
+			{
+				"skill": "其他",
+				"description": [
+					"能使用dede等开源模板一建搭站，熟悉ftp和xshell的使用，熟悉linux系统下的常用操作。熟悉域名管理，域名备案流程等相关管理"
+				]
+			}
+		]
   },
   "projects": [
     {

@@ -26,30 +26,35 @@
 				</div>
 			</div>
 			<app-split></app-split>
+			<div class="bulletin">
+				<h1 class="title">自我评价</h1>
+				<div class="content-wrapper">
+					<p class="content">{{info.bulletin}}</p>
+				</div>
+			</div>
+			<app-split></app-split>
 			<div class="infomsg">
-				<h1 class="title">技能</h1>
+				<h1 class="title">技能目录</h1>
 				<div class="info-wapper">
 					<ul>
 						<li v-for="(info,index) in info.infos" :key="index" class="info-item">{{info}}</li>
 					</ul>
 				</div>
 			</div>
-			<app-split v-show="info.pics && info.pics.length > 0"></app-split>
-			<div class="info-pics" v-show="info.pics && info.pics.length > 0">
-				<h1 class="title">商家实景</h1>
-				<div class="pic-wapper" ref="pics">
-					<ul class="pic-list" ref="piclist">
-						<li class="pic-item" v-for="(pic,index) in info.pics" :key="index">
-							<img :src="pic" alt="" width="120" height="90">
-						</li>
-					</ul>
-				</div>
-			</div>
 			<app-split></app-split>
-			<div class="bulletin">
-				<h1 class="title">自我评价</h1>
-				<div class="content-wrapper">
-					<p class="content">{{info.bulletin}}</p>
+			<div class="infomsg skills">
+				<h1 class="title">所会技能以及能做什么:</h1>
+				<div class="skills-wrapper">
+					<div
+					class="info-wapper"
+					v-for="skill in info.skills"
+					:key="skill.skill"
+					>
+						<h4 class="skill-title">{{skill.skill}}：</h4>
+						<ul>
+							<li v-for="des in skill.description" :key="des" class="info-item">{{des}}</li>
+						</ul>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -149,7 +154,7 @@
 					// this.$_messagesure('不支持了!') // 参数为string titleText显示默认
 					// this.$_messagesure({text: '不支持了!'}) // 参数为obj 不存在titleText，title显示默认
 					// this.$_messagesure({text: '不支持了!',titleText: ''}) // 空表示，不显示title
-					this.$_messagesure({text: '不支持了!', titleText: '温馨提示'}, function() { // 回调函数，最后执行
+					this.$_messagesure({text: '不支持了!', titleText: '温馨提示!'}, function() { // 回调函数，最后执行
 						self.favorite = !self.favorite
 						saveToLocal(self.info.id, 'favorite', self.favorite)
 					})
@@ -235,10 +240,21 @@
 			}
 			.infomsg{
 				padding:18px;
-				.title{padding-bottom:12px;margin-bottom:0;.border-1px(rgba(7,17,27,0.1));}
+				.title{padding-bottom:12px;margin-bottom:0;.border-1px(rgba(7,17,27,0.1));font-size: 16px;}
 				.info-item{
 					padding:16px 12px;font-size: 12px;line-height: 16px;color:rgb(7,17,27);.border-1px(rgba(7,17,27,0.1));
 					&:last-child{.border-none();}
+				}
+				&.skills{
+					.title{
+						margin-bottom:10px;.border-none();font-size: 18px;
+					}
+					.skill-title{
+						margin:10px 0;font-weight: bold;
+					}
+					.info-item{
+						padding:16px 12px; line-height: 20px;font-size: 14px;opacity: 0.85;
+					}
 				}
 			}
 		}
