@@ -99,7 +99,7 @@
 				"skill": "Bootstrap+Amazeui+Mui等框架",
 				"description": [
 					"可以使用框架进行开发。",
-					"这些前端框架的原理类似，使用它写好的样式，指定它的class，就能快速的在页面上显示出样式。快速的构建项目"
+					"使用过这些框架开发过项目，框架的原理类似，能帮助我们快速的构建项目"
 				]
 			},
 			{
@@ -439,18 +439,6 @@
 			],
 			"starTime": 1476892800000,
 			"endTime": 1497888000000
-		},
-		{
-			"name": "武汉蓝鸥科技有限公司",
-			"description": "公司描述",
-			"web": "H5前端工程师",
-			"dutys": [
-				"使用html5+css3，JavaScript+jQuery实现页面",
-				"使用bootstrap,amazeui等框架快速构建页面",
-				"使用angularJS+php对后台数据处理，并在前台做显示"
-			],
-			"starTime": 1464883200000,
-			"endTime": 1476547200000
 		}
 	]
 }
