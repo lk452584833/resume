@@ -55,6 +55,7 @@
 							<li v-for="des in skill.description" :key="des" class="info-item">{{des}}</li>
 						</ul>
 					</div>
+					<h1 class="title">以上是对自己所会技能点做的简单梳理，如果不对之处，还望指正！</h1>
 				</div>
 			</div>
 		</div>

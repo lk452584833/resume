@@ -117,14 +117,8 @@
 			{
 				"skill": "Git+Svn",
 				"description": [
-					"git的常用指令：git clone url 获取项目，git status 查看文件状态，git add name 把文件添加到本地仓库，git commit -m '说明' 提交本地仓库，git pull url 从远处仓库获取最新版并合并到本地。git push 推送本地仓库到远程。git branch -a 查看分支，git checkout -b <name>切换分支等",
+					"git的常用指令：git clone url 获取项目，git status 查看文件状态，git add name 把文件添加到本地仓库，git commit -m '说明' 提交本地仓库，git pull url 从远处仓库获取最新版并合并到本地。git push 推送本地仓库到远程。git branch -a 查看分支，git checkout -b <name>创建并切换分支,git merge name 合并分支,git branch -d <name>删除分支等",
 					"svn：右键checkout，并迁出源代码，右键svn update，svn commit 更新和提交。本地新建文件需要先add,然后再提交。代码提交出错，可以先resolve还原到上一步，修改好后再提交。"
-				]
-			},
-			{
-				"skill": "其他",
-				"description": [
-					"能使用dede等开源模板一建搭站，熟悉ftp和xshell的使用，熟悉linux系统下的常用操作。熟悉域名管理，域名备案流程等相关管理"
 				]
 			}
 		]
